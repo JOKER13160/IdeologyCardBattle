@@ -103,3 +103,7 @@ crashlytics-build.properties
 NotoSerifJP-Light SDF.asset
 NotoSerifJP-Light SDF.asset.meta
 NotoSerifJP-Light SDF.asset.meta.rej
+
+# VisualScripting.Flow\UnitOptions ビジュアルスクリプティング、でかすぎるためプッシュできない
+VisualScripting.Flow\UnitOptions.db
+VisualScripting.Flow\UnitOptions.db.meta
