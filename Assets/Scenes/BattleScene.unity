@@ -1618,6 +1618,7 @@ GameObject:
   - component: {fileID: 721576150}
   - component: {fileID: 721576149}
   - component: {fileID: 721576148}
+  - component: {fileID: 721576151}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1655,9 +1656,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"Button","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"GameManager","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"GameManager,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 543249247}
+    - {fileID: 721576151}
 --- !u!4 &721576150
 Transform:
   m_ObjectHideFlags: 0
@@ -1673,6 +1676,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &721576151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721576147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd32d3ad4309fc14bbb840a2eb864684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnText: {fileID: 1182716501}
 --- !u!1001 &729559695
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2304,6 +2320,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2035673615623724618, guid: adce1d6e3d0241f47be082f5d1bd94a3, type: 3}
   m_PrefabInstance: {fileID: 1667359777}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1182716501 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2168756050711323876, guid: adce1d6e3d0241f47be082f5d1bd94a3, type: 3}
+  m_PrefabInstance: {fileID: 1667359777}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1203350432
 GameObject:
   m_ObjectHideFlags: 0
@@ -3181,7 +3208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2168756050711323876, guid: adce1d6e3d0241f47be082f5d1bd94a3, type: 3}
       propertyPath: m_text
-      value: "1\u30BF\u30FC\u30F3\u76EE"
+      value: "1 \u30BF\u30FC\u30F3\u76EE"
       objectReference: {fileID: 0}
     - target: {fileID: 2168756050711323876, guid: adce1d6e3d0241f47be082f5d1bd94a3, type: 3}
       propertyPath: m_fontSize
