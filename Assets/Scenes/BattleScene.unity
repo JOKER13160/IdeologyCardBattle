@@ -834,6 +834,68 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b931c6925fc84d84a9ba06cb99d12932, type: 3}
+--- !u!1 &519822339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 519822341}
+  - component: {fileID: 519822340}
+  m_Layer: 0
+  m_Name: DeckManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &519822340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519822339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c646f931de43bd4faa505cf4591995e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allCardsSO: {fileID: 11400000, guid: f55fc09dd9acdf74880a85177ef1f2df, type: 2}
+  deck: []
+  hand: []
+  discardPile: []
+  initialDeckSetup:
+  - id: 1
+    count: 5
+  - id: a1
+    count: 1
+  - id: a2
+    count: 1
+  - id: a3
+    count: 1
+  - id: a4
+    count: 1
+  - id: a5
+    count: 1
+  maxHandSize: 10
+--- !u!4 &519822341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519822339}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.02208429, y: 0.130799, z: -1.0227635}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &521478857 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1918380107553185615, guid: b931c6925fc84d84a9ba06cb99d12932, type: 3}
@@ -2579,3 +2641,4 @@ SceneRoots:
   - {fileID: 56839440}
   - {fileID: 1389169012}
   - {fileID: 431404862}
+  - {fileID: 519822341}
