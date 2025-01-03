@@ -8,20 +8,27 @@ public class DeckManager : MonoBehaviour
     [Header("デッキ関連")]
     public CardDataSO allCardsSO; // 全カード情報を保持するSO
     [SerializeField] private List<CardData> deck = new(); // プレイヤーのデッキ
-    [SerializeField] private List<CardData> hand = new(); // 手札
+    public List<CardData> hand = new(); // 手札
     [SerializeField] private List<CardData> discardPile = new(); // 捨て札
+    [SerializeField] private int energy; // カードのリソース
 
     [Header("初期設定")]
     public List<CardIDCount> initialDeckSetup; // 初期デッキ (カードIDと枚数)
+    public int startHandCount; //初期手札の枚数
 
     [Header("デッキ設定")]
     public int maxHandSize = 10; // 手札の最大枚数
+
+    [Header("UI設定")]
+    [SerializeField] private UIManager UIManager;
 
 
     private void Start()
     {
         // 初期デッキを構築
         InitializeDeckWithIDCounts(initialDeckSetup);
+        // 初期手札を引く
+        MultiDrawCards(startHandCount);
     }
 
     /// <summary>
@@ -101,12 +108,14 @@ public class DeckManager : MonoBehaviour
                 return;
             }
         }
-
+        UIManager.HandUI(deck[0]);
         CardData drawnCard = deck[0];
+        
         deck.RemoveAt(0);
         hand.Add(drawnCard);
 
         Debug.Log($"カードを引きました: {drawnCard.cardName}");
+        
     }
 
     /// <summary>
@@ -161,6 +170,18 @@ public class DeckManager : MonoBehaviour
         else
         {
             Debug.LogWarning($"指定されたカードはデッキに存在しません: {card.cardName}");
+        }
+    }
+
+    /// <summary>
+    /// 指定した回数だけカードを引く関数を動かす
+    /// </summary>
+    /// <param name="n">引くカードの枚数</param>
+    public void MultiDrawCards(int n)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            DrawCard();
         }
     }
 }
