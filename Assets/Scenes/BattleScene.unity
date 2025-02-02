@@ -152,11 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deckManager: {fileID: 519822340}
-  cardPrefab: {fileID: 6349080171295252392, guid: b931c6925fc84d84a9ba06cb99d12932, type: 3}
-  cardNameText: {fileID: 0}
-  costText: {fileID: 0}
-  cardTypeText: {fileID: 0}
-  effectDescriptionText: {fileID: 0}
+  cardPrefab: {fileID: 3871655777075927139, guid: b931c6925fc84d84a9ba06cb99d12932, type: 3}
   handCardBox: {fileID: 1520926565}
 --- !u!4 &51825940
 Transform:
@@ -627,16 +623,16 @@ MonoBehaviour:
   deck: []
   hand: []
   discardPile: []
-  energy: 0
+  energy: 3
   initialDeckSetup:
-  - id: 1
-    count: 5
   - id: a1
     count: 1
   - id: a2
     count: 1
   - id: a3
     count: 1
+  - id: 1
+    count: 5
   - id: a4
     count: 1
   - id: a5

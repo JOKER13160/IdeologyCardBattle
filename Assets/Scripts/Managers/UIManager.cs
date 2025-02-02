@@ -8,22 +8,25 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] private DeckManager deckManager;
     [Header("カードプレハブ変数")]
-    [SerializeField] private GameObject cardPrefab;
-    [SerializeField] private TMP_Text cardNameText;
-    [SerializeField] private TMP_Text costText;
-    [SerializeField] private TMP_Text cardTypeText;
-    [SerializeField] private TMP_Text effectDescriptionText;
+    [SerializeField] private CardObject cardPrefab;
+    //[SerializeField] private TMP_Text cardNameText;
+    //[SerializeField] private TMP_Text costText;
+    //[SerializeField] private TMP_Text cardTypeText;
+    //[SerializeField] private TMP_Text effectDescriptionText;
     [SerializeField] private GameObject handCardBox;
 
 
-
+    // 手札にカードを追加する
     public void HandUI(CardData drawnCard)
     {
         //cardNameText.text = drawnCard.cardName;
         //costText.text = drawnCard.cost.ToString();
         //cardTypeText.text = drawnCard.ToString();
         //effectDescriptionText.text = drawnCard.effectDescription;
-        GameObject card = Instantiate(cardPrefab, Vector3.zero, Quaternion.identity, handCardBox.transform);
+        CardObject card = Instantiate(cardPrefab, Vector3.zero, Quaternion.identity, handCardBox.transform);
+        card.deckManager = deckManager;
+        card.cardData = drawnCard;
+
         TextMeshProUGUI[] cardTexts = card.GetComponentsInChildren<TextMeshProUGUI>();
 
         cardTexts[0].text = drawnCard.cost.ToString();

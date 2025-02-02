@@ -32,11 +32,12 @@ public class CardData
     public EffectType effectType;
     public int effectPower;
     public string effectDescription;
-    
+
+
 
 
     /// <summary>
-    /// コストラクタ
+    /// コンストラクタ
     /// </summary>
     /// <param name="datas"></param>
     public CardData(string[] datas)

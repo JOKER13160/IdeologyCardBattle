@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class DeckManager : MonoBehaviour
 {
@@ -110,18 +112,20 @@ public class DeckManager : MonoBehaviour
         }
         UIManager.HandUI(deck[0]);
         CardData drawnCard = deck[0];
-        
+
         deck.RemoveAt(0);
         hand.Add(drawnCard);
 
         Debug.Log($"カードを引きました: {drawnCard.cardName}");
-        
+
     }
 
     /// <summary>
     /// 手札からカードを使用する
     /// </summary>
     /// <param name="cardIndex">使用するカードのインデックス</param>
+
+
     public void PlayCard(int cardIndex)
     {
         if (cardIndex < 0 || cardIndex >= hand.Count)
