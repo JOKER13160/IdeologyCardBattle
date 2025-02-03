@@ -5,6 +5,7 @@ public class CardObject : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
 {
     public DeckManager deckManager;
     // このカードオブジェクトに対応するカードデータを保持する変数を追加
+    // UIManager からカードデータをここに渡している
     public CardData cardData;
     // IPointerClickHandler の実装
     public void OnPointerClick(PointerEventData eventData)
@@ -12,6 +13,18 @@ public class CardObject : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
         int cardIndex = GetCardIndex();
         if (cardIndex != -1)
         {
+            // エネルギーを消費する処理を追加
+            // エネルギーが足りない場合はカードを使用できない
+            if (cardData.cost > deckManager.energy)
+            {
+                // エネルギーが足りない場合はカードのコライダーを無効化
+                GetComponent<BoxCollider2D>().enabled = false;
+                Debug.LogWarning("エネルギーが足りません！");
+                return;
+            }
+            // エネルギーを消費してカードを使用
+            deckManager.energy -= cardData.cost;
+            // カードをプレイする処理を追加
             deckManager.PlayCard(cardIndex);
             // UI上のカードオブジェクトを削除する
             Destroy(gameObject);

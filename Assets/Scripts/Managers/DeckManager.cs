@@ -12,7 +12,7 @@ public class DeckManager : MonoBehaviour
     [SerializeField] private List<CardData> deck = new(); // プレイヤーのデッキ
     public List<CardData> hand = new(); // 手札
     [SerializeField] private List<CardData> discardPile = new(); // 捨て札
-    [SerializeField] private int energy; // カードのリソース
+    [SerializeField] public int energy; // カードのリソース
 
     [Header("初期設定")]
     public List<CardIDCount> initialDeckSetup; // 初期デッキ (カードIDと枚数)
@@ -135,6 +135,9 @@ public class DeckManager : MonoBehaviour
         }
 
         CardData playedCard = hand[cardIndex];
+
+
+
         hand.RemoveAt(cardIndex);
         discardPile.Add(playedCard);
 
