@@ -12,6 +12,7 @@ public enum SheetName
 {
     //シート名を入れる
     CardData,
+    EnemyData,
     CharaData
 }
 

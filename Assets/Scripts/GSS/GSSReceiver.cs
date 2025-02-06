@@ -55,8 +55,11 @@ public class GSSReceiver : MonoBehaviour
             DataBaseManager.instance.cardDataSO.cardDatasList =
                 new List<CardData>(sheetDataslist.Find(x => x.SheetName == SheetName.CardData).DatasList.Select(x => new CardData(x)).ToList());
 
-            
-            
+            // スクリプタブル・オブジェクトに代入(例２)
+            DataBaseManager.instance.enemyDataSO.enemyDatasList =
+                new List<EnemyData>(sheetDataslist.Find(x => x.SheetName == SheetName.EnemyData).DatasList.Select(x => new EnemyData(x)).ToList());
+
+
 
             // TODO 他の SO を追加する
 

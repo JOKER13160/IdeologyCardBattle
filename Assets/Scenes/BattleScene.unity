@@ -575,6 +575,7 @@ MonoBehaviour:
         m_CallState: 1
   sheetDatas:
   - SheetName: 0
+  - SheetName: 1
 --- !u!4 &431404862
 Transform:
   m_ObjectHideFlags: 0
@@ -796,6 +797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardDataSO: {fileID: 11400000, guid: f55fc09dd9acdf74880a85177ef1f2df, type: 2}
+  enemyDataSO: {fileID: 11400000, guid: 3c86bb2f4969b8e4b80cf8fd259cf699, type: 2}
 --- !u!4 &1389169012
 Transform:
   m_ObjectHideFlags: 0
