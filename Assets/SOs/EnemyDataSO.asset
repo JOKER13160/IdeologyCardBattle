@@ -21,7 +21,7 @@ MonoBehaviour:
     hp: 6
     exp: 5
     gold: 5
-    image: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 293cde734859bdd409a1f3514151fa24, type: 3}
   - id: 2
     rarity: 0
     enemyType: 1
@@ -30,7 +30,7 @@ MonoBehaviour:
     hp: 10
     exp: 5
     gold: 5
-    image: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 614b861adb666e9439c4e6e8e3e98bdf, type: 3}
   - id: 3
     rarity: 0
     enemyType: 2
@@ -39,7 +39,7 @@ MonoBehaviour:
     hp: 6
     exp: 5
     gold: 5
-    image: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 306e569d1140dd841a88345b91060b66, type: 3}
   - id: 4
     rarity: 1
     enemyType: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
     hp: 10
     exp: 10
     gold: 10
-    image: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 5bb506a3ac065c7489d1e85af9dd2d54, type: 3}
   - id: 5
     rarity: 1
     enemyType: 1
@@ -57,7 +57,7 @@ MonoBehaviour:
     hp: 15
     exp: 10
     gold: 10
-    image: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e59eca2823bb640489523610f91ab0d5, type: 3}
   - id: 6
     rarity: 1
     enemyType: 2
@@ -66,7 +66,7 @@ MonoBehaviour:
     hp: 8
     exp: 10
     gold: 10
-    image: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 04acdc91640cccc4e8fa340722f367f2, type: 3}
   - id: 7
     rarity: 2
     enemyType: 0
@@ -75,7 +75,7 @@ MonoBehaviour:
     hp: 18
     exp: 20
     gold: 40
-    image: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 5d463a1560998e14085df3c8f4ff44cc, type: 3}
   - id: 8
     rarity: 2
     enemyType: 1
@@ -84,7 +84,7 @@ MonoBehaviour:
     hp: 30
     exp: 20
     gold: 40
-    image: {fileID: 0}
+    sprite: {fileID: 21300000, guid: f9279c452bd8e304985108f25895d4fd, type: 3}
   - id: 9
     rarity: 3
     enemyType: 3
@@ -93,7 +93,7 @@ MonoBehaviour:
     hp: 100
     exp: 40
     gold: 100
-    image: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 5d2daa1ec5e99b944bfbece866d8b783, type: 3}
   - id: 10
     rarity: 3
     enemyType: 3
@@ -102,4 +102,4 @@ MonoBehaviour:
     hp: 100
     exp: 40
     gold: 100
-    image: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 77748e7ba87f96243b71b29901b47f85, type: 3}

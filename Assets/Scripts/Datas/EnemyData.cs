@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 /// <summary>
 /// 敵のレア度を表す列挙型
@@ -38,7 +40,7 @@ public class EnemyData
     public int hp;
     public int exp;
     public int gold;
-    public Image image;
+    public Sprite sprite;
 
     public EnemyData(string[] datas)
     {
@@ -50,8 +52,20 @@ public class EnemyData
         hp = int.Parse(datas[5]);
         exp = int.Parse(datas[6]);
         gold = int.Parse(datas[7]);
-        // Resources フォルダ内の Images/Enemy/ ディレクトリにある、
-        // datas[8] で指定された名前の画像アセットを読み込み、それを image 変数に代入する
-        image = Resources.Load<Image>("Images/Enemy/" + datas[8]);
+        // 画像のパスを設定（Assetsフォルダ内の指定フォルダ）
+        string path = "Images/Enemies/" + datas[8];
+
+        // 画像を取得
+        Addressables.LoadAssetAsync<Sprite>(path).Completed += handle =>
+        {
+            if (handle.Status == AsyncOperationStatus.Succeeded)
+            {
+                sprite = handle.Result;
+            }
+            else
+            {
+                Debug.LogError($"Failed to load sprite: {path}");
+            }
+        };
     }
 }
